@@ -1,0 +1,35 @@
+{
+  "grammars": [
+    {
+      "name": "mol_view_tree",
+      "camelcase": "MolViewTree",
+      "scope": "source.mol_view_tree",
+      "file-types": [
+        ".mol_view_tree"
+      ],
+      "injection-regex": "^mol_view_tree$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "MolViewTree grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "sdf",
+        "email": "sdf@mail.ru"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-mol_view_tree"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
