@@ -1,4 +1,4 @@
-"""MolViewTree grammar for tree-sitter"""
+"""Molviewtree grammar for tree-sitter"""
 
 from importlib.resources import files as _files
 

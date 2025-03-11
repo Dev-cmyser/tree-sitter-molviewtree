@@ -1,15 +1,23 @@
 {
-  "name": "tree-sitter-moltree",
+  "name": "tree-sitter-view-tree",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "grammar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-cmyser/tree-sitter-mol-view-tree.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "bugs": {
+    "url": "https://github.com/Dev-cmyser/tree-sitter-mol-view-tree/issues"
+  },
+  "homepage": "https://github.com/Dev-cmyser/tree-sitter-mol-view-tree#readme",
   "dependencies": {
     "tree-sitter-cli": "^0.25.3"
-  }
+  },
+  "description": ""
 }

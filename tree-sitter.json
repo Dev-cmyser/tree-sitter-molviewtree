@@ -1,27 +1,27 @@
 {
   "grammars": [
     {
-      "name": "mol_view_tree",
-      "camelcase": "MolViewTree",
-      "scope": "source.mol_view_tree",
+      "name": "molviewtree",
+      "camelcase": "Molviewtree",
+      "scope": "source.molviewtree",
       "file-types": [
-        ".mol_view_tree"
+        ".molviewtree"
       ],
-      "injection-regex": "^mol_view_tree$"
+      "injection-regex": "^molviewtree$"
     }
   ],
   "metadata": {
     "version": "0.1.0",
     "license": "MIT",
-    "description": "MolViewTree grammar for tree-sitter",
+    "description": "Molviewtree grammar for tree-sitter",
     "authors": [
       {
-        "name": "sdf",
-        "email": "sdf@mail.ru"
+        "name": "s",
+        "email": "s@mail.ru"
       }
     ],
     "links": {
-      "repository": "https://github.com/tree-sitter/tree-sitter-mol_view_tree"
+      "repository": "https://github.com/tree-sitter/tree-sitter-molviewtree"
     }
   },
   "bindings": {

@@ -1,5 +1,5 @@
 module.exports = grammar({
-    name: 'moltree',
+    name: 'viewtree',
 
     extras: $ => [/\s/, $.comment],
 

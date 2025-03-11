@@ -1,12 +1,12 @@
 import XCTest
 import SwiftTreeSitter
-import TreeSitterMolViewTree
+import TreeSitterMolviewtree
 
-final class TreeSitterMolViewTreeTests: XCTestCase {
+final class TreeSitterMolviewtreeTests: XCTestCase {
     func testCanLoadGrammar() throws {
         let parser = Parser()
-        let language = Language(language: tree_sitter_mol_view_tree())
+        let language = Language(language: tree_sitter_molviewtree())
         XCTAssertNoThrow(try parser.setLanguage(language),
-                         "Error loading MolViewTree grammar")
+                         "Error loading Molviewtree grammar")
     }
 }
