@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tree-sitter-molviewtree"
-description = "Molviewtree grammar for tree-sitter"
+description = "for $mol"
 version = "0.1.0"
 keywords = ["incremental", "parsing", "tree-sitter", "molviewtree"]
 classifiers = [
@@ -13,17 +13,17 @@ classifiers = [
   "Topic :: Text Processing :: Linguistic",
   "Typing :: Typed",
 ]
-authors = [{ name = "s", email = "s@mail.ru" }]
-requires-python = ">=3.9"
+authors = [{ name = "kirill novgorodtsev", email = "kirrallt@mail.ru" }]
+requires-python = ">=3.10"
 license.text = "MIT"
 readme = "README.md"
 
 [project.urls]
-Homepage = "https://github.com/tree-sitter/tree-sitter-molviewtree"
+Homepage = "https://github.com/dev-cmyser/tree-sitter-mol-view-tree"
 
 [project.optional-dependencies]
-core = ["tree-sitter~=0.22"]
+core = ["tree-sitter~=0.24"]
 
 [tool.cibuildwheel]
-build = "cp39-*"
+build = "cp310-*"
 build-frontend = "build"

@@ -1,4 +1,4 @@
-"""Molviewtree grammar for tree-sitter"""
+"""for $mol"""
 
 from importlib.resources import files as _files
 

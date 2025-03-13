@@ -1,27 +1,30 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
       "name": "molviewtree",
       "camelcase": "Molviewtree",
+      "title": "Molviewtree",
       "scope": "source.molviewtree",
       "file-types": [
-        ".molviewtree"
+        "molviewtree"
       ],
-      "injection-regex": "^molviewtree$"
+      "injection-regex": "^molviewtree$",
+      "class-name": "TreeSitterMolviewtree"
     }
   ],
   "metadata": {
     "version": "0.1.0",
     "license": "MIT",
-    "description": "Molviewtree grammar for tree-sitter",
+    "description": "for $mol",
     "authors": [
       {
-        "name": "s",
-        "email": "s@mail.ru"
+        "name": "kirill novgorodtsev",
+        "email": "kirrallt@mail.ru"
       }
     ],
     "links": {
-      "repository": "https://github.com/tree-sitter/tree-sitter-molviewtree"
+      "repository": "https://github.com/Dev-cmyser/tree-sitter-mol-view-tree"
     }
   },
   "bindings": {
@@ -30,6 +33,7 @@
     "node": true,
     "python": true,
     "rust": true,
-    "swift": true
+    "swift": true,
+    "zig": false
   }
 }
