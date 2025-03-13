@@ -8,7 +8,7 @@ module.exports = grammar({
 
 		component: $ => seq($.component_name, repeat($.node)),
 
-		_indent: $ => /\t+/, // Обязательно учитывать отступы для вложенности
+		indent: $ => /\t+/, // Обязательно учитывать отступы для вложенности
 
 		identifier: $ => /[a-zA-Z_$][a-zA-Z0-9_$]*/,
 
@@ -49,6 +49,6 @@ module.exports = grammar({
 				),
 			),
 
-		node: $ => prec.right(seq($._indent, choice($.component_declaration, $.property), optional(repeat($.node)))),
+		node: $ => prec.right(seq($.indent, choice($.component_declaration, $.property), optional(repeat($.node)))),
 	},
 })
