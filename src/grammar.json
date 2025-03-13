@@ -25,7 +25,7 @@
         }
       ]
     },
-    "_indent": {
+    "indent": {
       "type": "PATTERN",
       "value": "\\t+"
     },
@@ -267,7 +267,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "_indent"
+            "name": "indent"
           },
           {
             "type": "CHOICE",

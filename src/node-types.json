@@ -70,6 +70,10 @@
           "named": true
         },
         {
+          "type": "indent",
+          "named": true
+        },
+        {
           "type": "node",
           "named": true
         },
@@ -221,6 +225,10 @@
   },
   {
     "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "indent",
     "named": true
   },
   {

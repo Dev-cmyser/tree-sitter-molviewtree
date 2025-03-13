@@ -16,7 +16,7 @@
 #define PRODUCTION_ID_COUNT 1
 
 enum ts_symbol_identifiers {
-  sym__indent = 1,
+  sym_indent = 1,
   sym_identifier = 2,
   anon_sym_DOLLAR = 3,
   anon_sym_BANG = 4,
@@ -51,7 +51,7 @@ enum ts_symbol_identifiers {
 
 static const char * const ts_symbol_names[] = {
   [ts_builtin_sym_end] = "end",
-  [sym__indent] = "_indent",
+  [sym_indent] = "indent",
   [sym_identifier] = "identifier",
   [anon_sym_DOLLAR] = "$",
   [anon_sym_BANG] = "parameter_marker",
@@ -86,7 +86,7 @@ static const char * const ts_symbol_names[] = {
 
 static const TSSymbol ts_symbol_map[] = {
   [ts_builtin_sym_end] = ts_builtin_sym_end,
-  [sym__indent] = sym__indent,
+  [sym_indent] = sym_indent,
   [sym_identifier] = sym_identifier,
   [anon_sym_DOLLAR] = anon_sym_DOLLAR,
   [anon_sym_BANG] = anon_sym_BANG,
@@ -124,8 +124,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
-  [sym__indent] = {
-    .visible = false,
+  [sym_indent] = {
+    .visible = true,
     .named = true,
   },
   [sym_identifier] = {
@@ -385,7 +385,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(ts_builtin_sym_end);
       END_STATE();
     case 19:
-      ACCEPT_TOKEN(sym__indent);
+      ACCEPT_TOKEN(sym_indent);
       if (lookahead == '\t') ADVANCE(19);
       END_STATE();
     case 20:
@@ -504,7 +504,7 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [0] = {
     [ts_builtin_sym_end] = ACTIONS(1),
-    [sym__indent] = ACTIONS(1),
+    [sym_indent] = ACTIONS(1),
     [anon_sym_DOLLAR] = ACTIONS(1),
     [anon_sym_BANG] = ACTIONS(1),
     [anon_sym_QMARK] = ACTIONS(1),
@@ -532,7 +532,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [2] = {
     [sym_parameter] = STATE(5),
     [ts_builtin_sym_end] = ACTIONS(7),
-    [sym__indent] = ACTIONS(7),
+    [sym_indent] = ACTIONS(7),
     [anon_sym_DOLLAR] = ACTIONS(9),
     [anon_sym_BANG] = ACTIONS(11),
     [anon_sym_QMARK] = ACTIONS(11),
@@ -554,7 +554,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [sym_primitive_literal] = STATE(19),
     [sym_binding] = STATE(6),
     [ts_builtin_sym_end] = ACTIONS(13),
-    [sym__indent] = ACTIONS(13),
+    [sym_indent] = ACTIONS(13),
     [anon_sym_DOLLAR] = ACTIONS(15),
     [anon_sym_BSLASH] = ACTIONS(17),
     [anon_sym_true] = ACTIONS(19),
@@ -575,7 +575,7 @@ static const uint16_t ts_small_parse_table[] = {
   [0] = 2,
     ACTIONS(25), 2,
       ts_builtin_sym_end,
-      sym__indent,
+      sym_indent,
     ACTIONS(27), 13,
       anon_sym_DOLLAR,
       anon_sym_BSLASH,
@@ -593,7 +593,7 @@ static const uint16_t ts_small_parse_table[] = {
   [20] = 2,
     ACTIONS(29), 2,
       ts_builtin_sym_end,
-      sym__indent,
+      sym_indent,
     ACTIONS(31), 13,
       anon_sym_DOLLAR,
       anon_sym_BSLASH,
@@ -654,7 +654,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(46), 1,
       ts_builtin_sym_end,
     ACTIONS(48), 1,
-      sym__indent,
+      sym_indent,
     ACTIONS(50), 1,
       anon_sym_DOLLAR,
     STATE(14), 2,
@@ -662,7 +662,7 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_component_repeat1,
   [109] = 4,
     ACTIONS(48), 1,
-      sym__indent,
+      sym_indent,
     ACTIONS(52), 1,
       ts_builtin_sym_end,
     ACTIONS(54), 1,
@@ -682,7 +682,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_property,
   [137] = 4,
     ACTIONS(48), 1,
-      sym__indent,
+      sym_indent,
     ACTIONS(60), 1,
       ts_builtin_sym_end,
     ACTIONS(62), 1,
@@ -694,7 +694,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(64), 1,
       ts_builtin_sym_end,
     ACTIONS(66), 1,
-      sym__indent,
+      sym_indent,
     ACTIONS(69), 1,
       anon_sym_DOLLAR,
     STATE(14), 2,
@@ -702,7 +702,7 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_component_repeat1,
   [165] = 4,
     ACTIONS(48), 1,
-      sym__indent,
+      sym_indent,
     ACTIONS(71), 1,
       ts_builtin_sym_end,
     ACTIONS(73), 1,
@@ -715,37 +715,37 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_DOLLAR,
     ACTIONS(75), 2,
       ts_builtin_sym_end,
-      sym__indent,
+      sym_indent,
   [187] = 2,
     ACTIONS(81), 1,
       anon_sym_DOLLAR,
     ACTIONS(79), 2,
       ts_builtin_sym_end,
-      sym__indent,
+      sym_indent,
   [195] = 2,
     ACTIONS(85), 1,
       anon_sym_DOLLAR,
     ACTIONS(83), 2,
       ts_builtin_sym_end,
-      sym__indent,
+      sym_indent,
   [203] = 2,
     ACTIONS(89), 1,
       anon_sym_DOLLAR,
     ACTIONS(87), 2,
       ts_builtin_sym_end,
-      sym__indent,
+      sym_indent,
   [211] = 2,
     ACTIONS(93), 1,
       anon_sym_DOLLAR,
     ACTIONS(91), 2,
       ts_builtin_sym_end,
-      sym__indent,
+      sym_indent,
   [219] = 2,
     ACTIONS(97), 1,
       anon_sym_DOLLAR,
     ACTIONS(95), 2,
       ts_builtin_sym_end,
-      sym__indent,
+      sym_indent,
   [227] = 2,
     ACTIONS(5), 1,
       anon_sym_DOLLAR,
