@@ -1,14 +1,16 @@
 ;; Подсвечиваем сущности, начинающиеся на `$mol_`
-((\$[A-Za-z0-9_]+) @constructor)
+((identifier) @constructor
+  (#match? @constructor "^\\$mol_"))
 
-;; Операторы <=, =>, <=>
-((<=|=>|<=>) @operator)
+;; Подсвечиваем операторы <=, =>, <=>
+((binding) @operator)
 
 ;; Текст, идущий сразу после обратного слэша (до конца строки), считаем строкой
-((\\[^\n]*) @string)
+((string_literal) @string)
 
 ;; Слова с @ (например hint @ \Readme)
-((@[A-Za-z0-9_]+) @keyword)
+((localization_marker) @keyword)
 
-;; Пример подсветки разделителей
-((\/|\*) @punctuation.special)
+;; Пример подсветки разделителей `/` и `*`
+((list_marker) @punctuation.special)
+((dict_marker) @punctuation.special)
