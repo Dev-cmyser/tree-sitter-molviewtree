@@ -1,4 +1,4 @@
-module github.com/dev-cmyser/tree-sitter-mol-view-tree
+module github.com/tree-sitter/tree-sitter-molviewtree
 
 go 1.22
 

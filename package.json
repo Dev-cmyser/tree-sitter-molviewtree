@@ -1,23 +1,14 @@
 {
 	"name": "tree-sitter-molviewtree",
 	"version": "0.1.0",
-	"description": "for $mol",
-	"repository": "https://github.com/dev-cmyser/tree-sitter-mol-view-tree",
+	"description": "Molviewtree grammar for tree-sitter",
+	"repository": "https://github.com/tree-sitter/tree-sitter-molviewtree",
 	"license": "MIT",
 	"author": {
-		"name": "kirill novgorodtsev",
-		"email": "kirrallt@mail.ru"
+		"name": "k",
+		"email": "k@mail.ru"
 	},
 	"main": "bindings/node",
-	"tree-sitter": {
-		"scope": "source.molviewtree",
-		"file-types": [
-			".tree"
-		],
-		"highlights": [
-			"queries/molviewtree/highlights.scm"
-		]
-	},
 	"types": "bindings/node",
 	"keywords": [
 		"incremental",
@@ -41,7 +32,7 @@
 	},
 	"devDependencies": {
 		"prebuildify": "^6.0.1",
-		"tree-sitter-cli": "^0.25.3"
+		"tree-sitter-cli": "^0.24.7"
 	},
 	"peerDependencies": {
 		"tree-sitter": "^0.21.1"

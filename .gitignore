@@ -1,5 +1,3 @@
-node_modules
-
 # Rust artifacts
 target/
 
