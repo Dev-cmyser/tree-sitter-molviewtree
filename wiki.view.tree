@@ -5,4 +5,4 @@ $cmyser_wiki $mol_book2
 		<= View_page $mol_page
 			tools /
 				<= Lights $mol_lights_toggle
-				<= Theme $mol_theme_toggle
+				<= Theme @ $mol_theme_toggle

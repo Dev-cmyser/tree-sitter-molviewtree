@@ -4,9 +4,8 @@
 		{
 			"name": "molviewtree",
 			"camelcase": "Molviewtree",
-			"title": "Molviewtree",
 			"scope": "source.molviewtree",
-			"file-types": ["molviewtree"],
+			"file-types": ["tree"],
 			"injection-regex": "^molviewtree$",
 			"class-name": "TreeSitterMolviewtree",
 			"highlights": "queries/highlights.scm"
