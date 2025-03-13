@@ -8,7 +8,8 @@
 			"scope": "source.molviewtree",
 			"file-types": ["molviewtree"],
 			"injection-regex": "^molviewtree$",
-			"class-name": "TreeSitterMolviewtree"
+			"class-name": "TreeSitterMolviewtree",
+			"highlights": "queries/highlights.scm"
 		}
 	],
 	"metadata": {
