@@ -1,31 +1,54 @@
 module.exports = grammar({
-    name: 'molviewtree',
+	name: 'molviewtree',
 
-    extras: $ => [/\s/, $.comment],
+	extras: $ => [/\s/],
 
-    rules: {
-        source_file: $ => repeat($.statement),
+	rules: {
+		source_file: $ => repeat($.component),
 
-        statement: $ => choice($.definition, $.property),
+		component: $ => seq($.component_name, repeat($.node)),
 
-        definition: $ =>
-            seq(field('name', $.identifier), field('type', $.identifier), optional(seq('{', repeat($.statement), '}'))),
+		_indent: $ => /\t+/, // Обязательно учитывать отступы для вложенности
 
-        property: $ =>
-            prec.left(
-                seq(
-                    choice('<=', '<=>', '=>', '?'),
-                    field('prop', $.identifier),
-                    optional(field('value', choice($.identifier, $.string, $.number))),
-                ),
-            ),
+		identifier: $ => /[a-zA-Z_$][a-zA-Z0-9_$]*/,
 
-        identifier: $ => /\$?[a-zA-Z_][a-zA-Z0-9_]*/,
+		component_name: $ => seq('$', $.identifier),
 
-        string: $ => /"([^"\\]|\\.)*"/,
+		property_name: $ => seq($.identifier, optional($.parameter)),
 
-        number: $ => /\d+/,
+		parameter: $ => prec.left(seq(alias(choice('!', '?'), $.parameter_marker), $.identifier)),
 
-        comment: $ => token(seq('#', /.*/)),
-    },
+		string_literal: $ => seq('\\', /.*/),
+
+		primitive_literal: $ => choice('true', 'false', 'null', /-?\d+(\.\d+)?/),
+
+		list_marker: $ => '/',
+
+		dict_marker: $ => '*',
+
+		null_value: $ => '-',
+
+		binding: $ => choice('<=', '=>', '<=>'),
+
+		localization_marker: $ => '@',
+
+		component_declaration: $ => seq('<=', $.identifier, $.component_name),
+
+		property: $ =>
+			seq(
+				$.property_name,
+				optional(
+					choice(
+						seq($.binding, choice($.primitive_literal, $.string_literal, $.component_name)),
+						$.localization_marker,
+						choice($.list_marker, $.dict_marker),
+						$.null_value,
+						$.string_literal,
+						$.primitive_literal,
+					),
+				),
+			),
+
+		node: $ => prec.right(seq($._indent, choice($.component_declaration, $.property), optional(repeat($.node)))),
+	},
 })
