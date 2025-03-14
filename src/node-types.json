@@ -180,7 +180,7 @@
           "named": true
         },
         {
-          "type": "localization_marker",
+          "type": "localization_string",
           "named": true
         },
         {
@@ -295,7 +295,7 @@
     "named": true
   },
   {
-    "type": "localization_marker",
+    "type": "localization_string",
     "named": true
   },
   {

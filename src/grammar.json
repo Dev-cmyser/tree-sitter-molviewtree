@@ -190,6 +190,30 @@
       "type": "STRING",
       "value": "@"
     },
+    "localization_string": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "@"
+          },
+          {
+            "type": "PATTERN",
+            "value": "\\s+"
+          },
+          {
+            "type": "STRING",
+            "value": "\\"
+          },
+          {
+            "type": "PATTERN",
+            "value": ".+"
+          }
+        ]
+      }
+    },
     "component_binding": {
       "type": "SEQ",
       "members": [
@@ -360,7 +384,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "localization_marker"
+                  "name": "localization_string"
                 },
                 {
                   "type": "CHOICE",

@@ -36,6 +36,8 @@ module.exports = grammar({
 
 		localization_marker: $ => '@',
 
+		localization_string: $ => token(seq('@', /\s+/, '\\', /.+/)),
+
 		component_binding: $ => seq($.identifier, choice($.component_name, $.string_literal)),
 
 		component_declaration_with_inline: $ => seq($.component_declaration, optional(seq(' ', $.property))),
@@ -60,7 +62,7 @@ module.exports = grammar({
 								seq($.property_name, optional(choice($.string_literal, $.primitive_literal))),
 							),
 						),
-						$.localization_marker,
+						$.localization_string,
 						choice($.list_marker, $.dict_marker),
 						$.string_literal,
 						$.primitive_literal,
