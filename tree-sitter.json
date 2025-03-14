@@ -5,7 +5,6 @@
 			"camelcase": "Molviewtree",
 			"scope": "source.molviewtree",
 			"file-types": ["tree"],
-			"injection-regex": "^molviewtree$",
 			"highlights": "queries/highlights.scm"
 		}
 	],
