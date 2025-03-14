@@ -41,17 +41,20 @@
       "value": "[a-zA-Z_$][a-zA-Z0-9_$]*"
     },
     "component_name": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "$"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "identifier"
-        }
-      ]
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "$"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[a-zA-Z_$][a-zA-Z0-9_$]*"
+          }
+        ]
+      }
     },
     "property_name": {
       "type": "SEQ",

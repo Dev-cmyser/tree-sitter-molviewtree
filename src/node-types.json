@@ -89,21 +89,6 @@
     }
   },
   {
-    "type": "component_name",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "node",
     "named": true,
     "fields": {},
@@ -262,10 +247,6 @@
     "named": false
   },
   {
-    "type": "$",
-    "named": false
-  },
-  {
     "type": "<=",
     "named": false
   },
@@ -283,6 +264,10 @@
   },
   {
     "type": "caret",
+    "named": true
+  },
+  {
+    "type": "component_name",
     "named": true
   },
   {

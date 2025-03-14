@@ -14,7 +14,7 @@ module.exports = grammar({
 
 		identifier: $ => /[a-zA-Z_$][a-zA-Z0-9_$]*/,
 
-		component_name: $ => seq('$', $.identifier),
+		component_name: $ => token(seq('$', /[a-zA-Z_$][a-zA-Z0-9_$]*/)),
 
 		property_name: $ => seq(choice($.css_variable, $.identifier), optional($.parameter)),
 
