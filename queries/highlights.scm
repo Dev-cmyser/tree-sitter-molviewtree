@@ -16,6 +16,8 @@
 ((list_marker) @punctuation.list_marker)
 ((dict_marker) @punctuation.special)
 ((parameter) @punctuation.special)
+((caret) @punctuation.special)
+((css_variable) @punctuation.special)
 
 ;; numbers, booleans, null => highlight as constants
 ((primitive_literal) @constant)
