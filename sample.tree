@@ -7,9 +7,9 @@ $mol_theme_demo $mol_example_large
 	sub /
 		<= Config $mol_row sub /
 			<= Hue_field $mol_form_field
-				name \Hue
+				name @ \Hue
 				Content <= Hue $mol_number
-					value? <=> hue? 240
+					value? <=> hue? false
 					precision_change 15
 			<= Hue_spread_field $mol_form_field
 				name \Hue spread
